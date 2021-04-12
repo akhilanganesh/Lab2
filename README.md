@@ -1,1 +1,1 @@
-https://akhilanganesh.github.io/Lab2/
+https://akhilanganesh.github.io/cse110-lab2/
