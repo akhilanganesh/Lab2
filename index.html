@@ -1,20 +1,18 @@
 <!DOCTYPE html>
-<html lang=”en”>
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Journal entries I have written">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Akhilan Ganesh">
-    <link rel="icon" href="/logo.png">
+    <link rel="icon" href="logo.png">
     <title>Akhil's Journal Entries</title>
 </head>
-
 <body>
     <main>
         <header>
             <div>
-                <img src="akhil.jpg" alt="A picture of me" height=500/>
+                <img src="akhil.jpg" alt="A picture of me" height="500" />
                 <p>
                     My name is Akhilan Ganesh, and I'm a sophomore at UCSD.
                     If you don't know me yet, maybe the following daily journal entries might 
@@ -31,11 +29,14 @@
         <nav>
             <a href="#today">Today</a> |
             <a href="#yesterday">Yesterday</a> |
-            <a href="#two-days-ago">2 Days Ago</a>
+            <a href="#two-days-ago">2 Days Ago</a> |
+            <a href="#form">Form</a>
         </nav>
         
+        <hr>
+
         <section>
-            <a name="today"></a>
+            <a id="today"></a>
             <h2>Today</h2>
             <h3>A mother's birthday</h3>
 
@@ -66,7 +67,7 @@
         
 
         <section>
-            <a name="yesterday"></a>
+            <a id="yesterday"></a>
             <h2>Yesterday</h2>
             <h3>Let me go in the wind already</h3>
 
@@ -101,8 +102,8 @@
         
 
         <section>
-            <a name="two-days-ago"></a>
-            <h2 name="two-days-ago">2 Days Ago</h2>
+            <a id="two-days-ago"></a>
+            <h2>2 Days Ago</h2>
             <h3>I feel reborn from the dreariness</h3>
 
             <p>
@@ -121,7 +122,7 @@
 
             <details>
                 <summary>Dragon Age:Inquisition, "The Dawn Will Come"</summary>
-                <audio controls width="250" src="dai.mp3" type="audio/mp3"></audio>
+                <audio controls src="dai.mp3"></audio>
             </details>
 
             <p>
@@ -130,49 +131,51 @@
                 haha:
             </p>
 
-            <video controls src="meme-ai.mp4" type="video/mp4"></video>
+            <video controls src="meme-ai.mp4"></video>
             
         </section>
         
         <p><i>Note: Journal entries prior to these have been omitted for privacy purposes. If you really want to read them, 
-            contact me and I'll send you an NDA form to sign before you can read them. :)
+            contact me and I'll send you an NDA form to sign before showing them. :)
         </i></p>
 
-        <section>input (checkbox, radio, text, date)*, textarea, datalist, select, option, button
+        <section>
+            <a id="form"></a>
+            <h2>Form</h2>
 
             <p><b>How to get me to know you better:</b></p>
             <form method="get">
                 <fieldset>
-                    <label>First name:</label>
-                    <input type="text"><br><br>
-                    <label>Last name:</label>
-                    <input type="text"><br><br>
-                    <label>Phone number:</label>
-                    <input type="text"><br><br>
-                    <datalist>
-                        <option>Don't have one</option>
-                        <option>Can't give</option>
+                    <label id="fname">First name:</label>
+                    <input type="text" id="fname"><br><br>
+                    <label id="lname">Last name:</label>
+                    <input type="text"id="lname"><br><br>
+                    <label id="phonenum">Phone number:</label>
+                    <input id="phonenum" list="phonenums" type="text"><br><br>
+                    <datalist id="phonenums">
+                        <option value="Don't have one"></option>
+                        <option value="Can't give"></option>
                     </datalist>
                     <label>Your favorite primary color:</label><br><br>
-                    <input type="radio"><label>Red</label><br><br>
-                    <input type="radio"><label>Blue</label><br><br>
-                    <input type="radio"><label>Yellow</label><br><br>
+                    <input type="radio" name="color"><label>Red</label><br><br>
+                    <input type="radio" name="color"><label>Blue</label><br><br>
+                    <input type="radio" name="color"><label>Yellow</label><br><br>
                     <label>Birthday:</label>
                     <input type="date"><br><br>
                     <label>Which entries you've read:</label><br><br>
                     <input type="checkbox"><label>Today</label><br><br>
                     <input type="checkbox"><label>Yesterday</label><br><br>
                     <input type="checkbox"><label>2 Days Ago</label><br><br>
-                    <label>Any comments:</label><br><br>
-                    <textarea>Type here</textarea><br><br>
-                    <label>What's my full first name? Do you remember?</label><br><br>
-                    <select>
-                        <option>Akhil</option>
-                        <option>Kapil</option>
-                        <option>Ganesh</option>
-                        <option>Akhilan</option>
+                    <label>Any comments about me:</label><br><br>
+                    <textarea id="comments">Type here</textarea><br><br>
+                    <label>To check if you are not a bot: what work did I finish first on my mom's birthday?</label><br><br>
+                    <select id="not-a-bot">
+                        <option>MATH 183 HW</option>
+                        <option>CSE 140L Lectures</option>
+                        <option>Watering the Plants</option>
+                        <option>Meditation</option>
                     </select><br><br>
-                    <input type="submit" value="Yes!">
+                    <button type="submit"><b>Submit!</b></button>
                     
                 </fieldset>
             </form>
